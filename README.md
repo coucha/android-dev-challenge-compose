@@ -1,5 +1,7 @@
 # Dog ?? Adoption
 
+![Workflow result](https://github.com/coucha/android-dev-challenge-compose/workflows/Check/badge.svg)
+
 ## :camera_flash: Screenshots
 <img src="/results/screenshot_1.png" width="260">&emsp;<img src="/results/screenshot_2.png" width="260">
 
