@@ -71,7 +71,8 @@ fun DetailApp(dog: Dog) {
                 )
             }
             Text(
-                text = dog.name, style = TextStyle(
+                text = dog.name,
+                style = TextStyle(
                     fontSize = 30.sp
                 ),
                 modifier = Modifier.padding(16.dp)

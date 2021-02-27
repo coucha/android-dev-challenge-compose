@@ -49,11 +49,15 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             MyTheme {
-                MyApp(onItemClick = { dog ->
-                    startActivity(Intent(this, DogActivity::class.java).apply {
-                        putExtra("name", dog.name)
-                    })
-                })
+                MyApp(
+                    onItemClick = { dog ->
+                        startActivity(
+                            Intent(this, DogActivity::class.java).apply {
+                                putExtra("name", dog.name)
+                            }
+                        )
+                    }
+                )
             }
         }
     }
@@ -98,7 +102,8 @@ fun DogCard(dog: Dog, onItemClick: (Dog) -> Unit) {
                 .clickable { onItemClick(dog) }
         ) {
             Text(
-                text = dog.name, style = TextStyle(
+                text = dog.name,
+                style = TextStyle(
                     fontSize = 20.sp
                 ),
                 modifier = Modifier.padding(16.dp)
@@ -119,9 +124,10 @@ fun DogCard(dog: Dog, onItemClick: (Dog) -> Unit) {
 @Composable
 fun LightPreview() {
     MyTheme {
-        MyApp(onItemClick = {
-
-        })
+        MyApp(
+            onItemClick = {
+            }
+        )
     }
 }
 
@@ -129,8 +135,9 @@ fun LightPreview() {
 @Composable
 fun DarkPreview() {
     MyTheme(darkTheme = true) {
-        MyApp(onItemClick = {
-
-        })
+        MyApp(
+            onItemClick = {
+            }
+        )
     }
 }
